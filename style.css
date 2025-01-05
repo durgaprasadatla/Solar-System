@@ -1,0 +1,100 @@
+h1{
+    background-color: white;
+    border-radius: 10px;
+    margin-left: 50px;
+    font-size: 5vw;
+    line-height: 5vw;
+    font-variation-settings: 'wght'100,'wdth'85;
+    background-image: linear-gradient(red,blue) ;
+    background-clip: text;
+    color: transparent;
+}
+/* h1,char{
+    --delay:calc((var(--char-index)+1)*400ms)
+    animation:breath 4000ms infinte both;
+    animation-delay: var(--delay);
+}
+h1:hover span{
+animation-play-state: paused;
+} */
+
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: black;
+}
+.container{
+    font-size: 10px;
+    width: 40em;
+    height: 40em;
+    position: relative;
+}
+.son{
+    position: absolute;
+    top: 15em;
+    left: 15em;
+    width: 20em;
+    height: 20em;
+    border-radius: 50%;
+    background-color: yellow;
+    box-shadow: 0 0 3em rgb(232, 228, 226);
+}
+.earth,.moon{
+    position: absolute;
+    border-style: solid;
+    border-color: black ;
+    border-width: 0.1em 0.1em 00;
+    border-radius: 50%;
+}
+.earth{
+    top: 5em;
+    left: 5em;
+    width: 40em;
+    height: 40em;
+    animation: orbit 36.5s linear infinite ;
+}
+.moon{
+    top: 0;
+    right: 0;
+    width: 10em;
+    height: 10em;
+    animation: orbit 3s linear infinite;
+}
+.earth::before,
+.moon::before{
+    content:"";
+    position: absolute;
+    border-radius: 50%;
+}
+.earth::before{
+    top: 2.8em;
+    right: 2.8em;
+    height: 5em;
+    width: 5em;
+    background-color:hotpink;
+    box-shadow: 0 0 3em rgb(214, 214, 225);
+}
+/* .earth::after{
+    top: 2.8em;
+    right: 2.8em;
+    height: 5em;
+    width: 5em;
+    background-color: aqua;
+} */
+.moon::before{
+    top: 1em;
+    right: 0.5em;
+    width: 2em;
+    height: 2em;
+    background-color:white;
+    box-shadow: 0 0 3em red;
+}
+@keyframes orbit{
+    to{
+        transform: rotate(360deg);
+    }
+}
